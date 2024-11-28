@@ -1,0 +1,41 @@
+**Data Science 100 101 Project Final Report**
+
+**Intro**
+
+A computer science group at UBC has set up a MineCraft server and are recording play sessions in an attempt to understand how people play video games. In recording this they created two datasets, one with player information and another with past play sessions. It is the goal of this project to use the data provided to us from the MineCraft server in order to address one of the questions posed by the project lead, Frank Wood. The question we chose was question 1:
+
+“We would like to know which "kinds" of players are most likely to contribute a large amount of data so that we can target those players in our recruiting efforts.”
+
+We chose this question because we believe it to be the most valuable to this project. The research team needs to understand who is playing the most as they need players who will contribute more than just demographic data in order to answer the other two questions posed by the group. Essentially, in analyzing and identifying the most valuable player group(s) in terms of data contributed we can help the research team in finding players who will be helpful in answering the other questions.
+
+To address which kinds of players are most likely to contribute the most data we used both datasets. The first dataset, players.csv, has 196 observations and is a list of all unique players, including data about each player. The bulk of the players.csv data was collected in the intro survey and then updated with the hours that the participant played. The second, sessions.csv, has 1535 observations and is a list of individual play sessions by each player, including data about the session. This data was collected by recording the activity of players on the server and then attaching it to the hashed email of the player. The variables in both datasets are presented below:
+
+**players.csv**
+| Variable | Description |
+|--- |---|
+| experience | A category of how experienced the player is. It ranges between beginner, amateur, regular, pro, and veteran. This is a qualitative variable. |
+| subscribe | Whether or not the player has subscribed to revieve email updates. This is a qualitative variable. |
+| hashedEmail | Just the players email, useless for the question. Linked to the sessions dataset. This is a qualitative variable. |
+| played_hours | Number of hours played by the players. This is a quantitative variable. |
+| name | Player name, useless for the project. This is a qualitative variable. |
+| gender | The player's gender. This is a qualitative variable. |
+| age | The player's age. This is a quantitative variable. |
+| individualId | Useless for the project. This is a qualitative variable. |
+| organzationName | Useless for the project. This is a qualitative variable. |
+
+The major issues with this dataset are that so many of the players have zero hours contributed; which is a problem because it will cause any plotting to look empty in the middle which will create difficulty in analyzing the data. There are also mutliple useless variables in dataset, which is an simple issue to solve through wrangling.
+
+The response variable of interest in this database is the played_hours and the explanatory variables are experience, gender, and age. The explanatory variables will tell us details of the players which we will correlate to the the played_hours to adress the question.
+
+**sessions.csv**
+| Variable | Description |
+|--- |---|
+| hashedEmail | The players email, linked to the players information in the other dataset. A qualitative variable. |
+| start_time | The start time for the play session. This is a quantitative variable. |
+| end_time | The end time for the play session. This is a quantitative variable. |
+| original_start_time | The original start time for the play session. This is a quantitative variable and harder to use as it displays in UNIX time |
+| original_end_time | The original end time for the play session. This is a quantitative variable and harder to use as it displays in UNIX time. |
+
+The major issue with this dataset is the original start and end time are unneccesary to our analysis but that will be solved quickly through wrangling. Also worth noting that the time zone is in GMT for the database.
+
+In this project and through the rest of this notebook we will attempt to answer the predictive question we selected using the data available and present a full analysis, from reading the data to communicating results.
