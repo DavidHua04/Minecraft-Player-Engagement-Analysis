@@ -78,11 +78,8 @@ jupyter notebook analysis.ipynb
 
 ## Results
 
-For detailed results and analysis, please refer to the [final report](./report.pdf).
+For detailed results and analysis, please refer to the [final report](./minecraft_player_engagement_analysis.ipynb).
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
-```
-
-The new project name is **"UBC MineCraft Player Analysis Project"**. You can still adjust the content as needed for your specific context.
