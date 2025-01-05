@@ -1,4 +1,4 @@
-# UBC MineCraft Player Analysis Project
+# UBC MineCraft Player Engagement Analysis
 
 ## Introduction
 
